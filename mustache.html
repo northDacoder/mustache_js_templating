@@ -1,0 +1,60 @@
+<!doctype html>
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-git2.js"></script>
+    <script type="text/javascript" src="js/mustache.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/script2.js"></script>
+    <script type="text/javascript" src="js/script3.js"></script>
+    <script type="text/javascript" src="js/script4.js"></script>
+    <title>I mustache you a question</title>
+</head>
+
+<body>
+	<h1>Mustache Fun</h1>
+
+	<button onclick="renderExercise1()">Click for HTML1</button>
+	<button onclick="renderExercise2()">Click for HTML2</button>
+    <button onclick="renderExercise3()">Click for HTML3</button>
+    <button onclick="renderExercise4()">Click for HTML4</button>
+
+	<div id="exerciseContent">
+	<script type="text/template" id="skillsText">
+        <h2>Exercise 3</h2>
+        <h3>{{fname}} {{lname}}</h3>
+        <p>Cell: {{cellnum}}</p>
+        <p>skills: </p> 
+        <ul>
+            {{#skills}}
+                <li>{{.}}</li>
+            {{/skills}}
+        </ul>
+    </script>
+
+    <script type="text/template" id="exercise4-template">
+        <h2>Exercise 4</h2>
+        <h3>Employees</h3>
+        <ul>
+            {{#employees}}
+                <li>{{name}}</li>
+                    <ul>
+                        <li>{{cellnum}}</li>
+                    </ul>
+                    <ul>
+                        <li>{{email}}</li>
+                    </ul>
+                        <p>Skills:</p>
+                    <ul>
+                        {{#skills}}
+                            <li>{{.}}</li>
+                        {{/skills}}
+                    </ul>
+            {{/employees}}
+        </ul>
+    </script>
+
+	</div>
+
+
+</body>
+
+</html>
